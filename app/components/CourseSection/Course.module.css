@@ -12,7 +12,7 @@
   padding: 0 5%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Horizontally centers everything */
+  align-items: center;
 }
 
 .header {
@@ -38,8 +38,6 @@
 }
 
 .title {
-  /* Exact Styles Provided by You */
-  font-family: inherit; 
   font-weight: 400;
   font-size: 72.43px;
   line-height: 72.43px;
@@ -50,8 +48,6 @@
 }
 
 .subtitle {
-  /* Exact Styles Provided by You */
-  font-family: inherit;
   font-weight: 400;
   font-size: 24.14px;
   line-height: 36.21px;
@@ -64,27 +60,27 @@
 
 .accordionContainer {
   width: 100%;
-  max-width: 1000px; /* Is se zyada wide nahi honge boxes */
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 0 auto; /* Ensures container itself is centered */
+  margin: 0 auto;
 }
 
 .accordionItem {
   width: 100%;
   background: #ffffff;
-  border: 1.5px solid #78E378; 
+  border: 1.5px solid #78E378;
   border-radius: 12px;
   padding: 24px 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-sizing: border-box; /* Padding content ko bahar nahi nikaalegi */
+  box-sizing: border-box;
 }
 
 .activeItem {
   background-color: #1a1a1a !important;
-  border-color: #78E378 !important; 
+  border-color: #78E378 !important;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -95,14 +91,12 @@
 }
 
 .moduleTitle {
-  /* Inner Box Text Specs - 20px Fixed */
-  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
   color: #1a1a1a;
-  text-transform: none; 
+  text-transform: none;
   transition: color 0.3s ease;
 }
 
@@ -122,22 +116,40 @@
   transform: rotate(180deg);
 }
 
-/* --- Mobile Specific Tweaks (Keeping Fonts Same) --- */
+.descriptionWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.descriptionWrapper.show {
+  max-height: 200px;
+  margin-top: 15px;
+  opacity: 1;
+}
+
+.descriptionText {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+  padding-top: 15px;
+  border-top: 1px solid rgba(120, 227, 120, 0.3);
+}
+
 @media (max-width: 768px) {
   .title {
-    /* Only reducing for very small screens if it breaks layout, 
-       otherwise keeping it as close to 72px as possible */
-    font-size: 50px; 
+    font-size: 50px;
     line-height: 55px;
   }
-  
+
   .titleWrapper {
-    flex-direction: column; /* Stack emoji on mobile to keep title centered */
+    flex-direction: column;
     gap: 10px;
   }
 
   .accordionItem {
-    padding: 20px; /* Small screen par padding thori kam centering ke liye */
+    padding: 20px;
   }
 }
 
@@ -146,11 +158,13 @@
     font-size: 38px;
     line-height: 42px;
   }
+
   .subtitle {
     font-size: 20px;
     line-height: 28px;
   }
+
   .moduleTitle {
-    font-size: 18px; /* Slightly smaller only for tiny phones */
+    font-size: 18px;
   }
 }

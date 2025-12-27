@@ -7,14 +7,7 @@ export default function GiftSection() {
     <section className={styles.giftSection}>
       <div className={styles.container}>
 
-        <div className={styles.imageWrapper}>
-          <img
-            src="/images/GiftGirl.png"
-            alt="Vocal Coach"
-            className={styles.personImage}
-          />
-        </div>
-
+        {/* Text Left Side */}
         <div className={styles.content}>
           <h2 className={styles.heading}>
             <span className={styles.lineOne}>
@@ -32,6 +25,15 @@ export default function GiftSection() {
           <button type="button" className={styles.giftButton}>
             Send as a Gift
           </button>
+        </div>
+
+        {/* Image Right Side */}
+        <div className={styles.imageWrapper}>
+          <img
+            src="/images/GiftGirl.png"
+            alt="Vocal Coach"
+            className={styles.personImage}
+          />
         </div>
 
       </div>
