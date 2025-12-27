@@ -1,0 +1,189 @@
+.giftSection {
+  background-color: #f0faf5;
+  padding: 80px 24px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+}
+
+.imageWrapper {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.personImage {
+  width: auto;
+  max-width: 100%;
+  max-height: 85vh;
+  height: auto;
+  display: block;
+}
+
+.content {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 400;
+  color: #0A0A0A;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.lineOne {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.lineTwo {
+  display: block;
+}
+
+.treeIcon {
+  width: 48px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.description {
+  font-size: 20px;
+  color: #4B5563;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.giftButton {
+  background-color: #78E378;
+  color: #000000;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+}
+
+@media (max-width: 1055px) {
+  .giftSection {
+    padding: 60px 24px;
+    min-height: auto;
+  }
+
+  @media (min-width: 640px) {
+    .availableSection {
+      padding: 64px 32px;
+    }
+
+    .mainHeading {
+      font-size: 42px;
+    }
+
+    .retailersGrid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 600px;
+      gap: 16px;
+    }
+
+    .retailerName {
+      font-size: 13px;
+    }
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
+  .imageWrapper,
+  .content {
+    display: contents;
+  }
+
+  .heading {
+    order: 1;
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .lineOne {
+    justify-content: center;
+  }
+
+  .description {
+    order: 2;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .personImage {
+    order: 3;
+    margin: 0 auto 90px auto;
+  }
+
+  .giftButton {
+    order: 4;
+    margin: 0 auto 20px auto;
+  }
+
+  .treeIcon {
+    width: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 38px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .personImage {
+    max-height: 35vh;
+  }
+
+  .treeIcon {
+    width: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 32px;
+  }
+
+  .lineOne {
+    gap: 8px;
+  }
+
+  .giftButton {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
