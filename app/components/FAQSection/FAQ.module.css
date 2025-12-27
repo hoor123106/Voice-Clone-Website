@@ -33,7 +33,8 @@
 }
 
 .questionIcon {
-  font-size: 40px; /* Adjusting emoji size to match 48px text */
+  font-size: 40px;
+  /* Adjusting emoji size to match 48px text */
 }
 
 .accordion {
@@ -60,7 +61,8 @@
   letter-spacing: 0%;
   color: #000000;
   margin: 0;
-  text-align: left; /* Text alignment to left for readability in accordion */
+  text-align: left;
+  /* Text alignment to left for readability in accordion */
 }
 
 .arrowIcon {
@@ -80,16 +82,15 @@
 }
 
 .active .answerWrapper {
-  max-height: 200px; /* Sufficient for your text */
+  max-height: 200px;
+  /* Sufficient for your text */
 }
 
 .answerContent {
   padding-top: 16px;
 }
 
-/* Answer Styles - Inter Font Family */
 .answerText {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;

@@ -7,27 +7,16 @@ const Meeting: React.FC = () => {
   return (
     <section className={styles.meetingSection}>
       <div className={styles.container}>
-        
-        {/* Video Left side par */}
+
         <div className={styles.videoWrapper}>
-          <div className={styles.imageContainer}>
-            <img 
-              src="/images/video.png" 
-              alt="Sevil Velsha Video" 
-              className={styles.videoImage} 
-            />
-            <div className={styles.playButton}>
-              <div className={styles.playIcon}></div>
-            </div>
+          <div className={styles.videoContainer}>
+
           </div>
         </div>
 
-        {/* Content Right side par - Single Title logic */}
         <div className={styles.contentWrapper}>
-          <h2 className={styles.title}>
-            Meet the Voice Behind the Method
-          </h2>
-          
+          <h2 className={styles.title}>Meet the Voice Behind the Method</h2>
+
           <ul className={styles.list}>
             <li className={styles.listItem}>
               <img src="/images/degree.png" alt="Education" className={styles.listIcon} />
@@ -49,12 +38,14 @@ const Meeting: React.FC = () => {
 
           <div className={styles.bioText}>
             <p>
-              Sevil Velsha is a voice coach, PhD, and educator dedicated to helping people 
+              Sevil Velsha is a voice coach, PhD, and educator dedicated to helping people
               unlock authority, calm, and presence through their voice.
             </p>
-            <span className={styles.quote}>
-              "Her work proves one truth: your voice is not just sound — it is presence made audible."
-            </span>
+            <div className={styles.quoteWrapper}>
+              <span className={styles.quote}>
+                "Her work proves one truth: your voice is not just sound — it is presence made audible."
+              </span>
+            </div>
           </div>
         </div>
 
