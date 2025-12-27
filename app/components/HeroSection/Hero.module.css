@@ -1,0 +1,211 @@
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 10%;
+  background-color: #f1f7f5;
+  min-height: 90vh;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.heroContentWrapper {
+  flex: 1.2;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography Styles */
+.heroSubTitle {
+  color: #6C757D;
+  font-weight: 400;
+  font-size: 20.75px;
+  line-height: 1.2;
+  letter-spacing: 0.36px;
+  margin-bottom: 1.5rem;
+}
+
+.heroMainTitle {
+  font-weight: 700;
+  font-size: 132.78px;
+  line-height: 120px;
+  letter-spacing: -4px;
+  color: #1a1a1a;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.heroMainTitle span {
+  font-size: 45px;
+  vertical-align: top;
+}
+
+.heroTagline {
+  font-weight: 500;
+  font-size: 37.34px;
+  line-height: 41.49px;
+  color: #222;
+  margin: 2.5rem 0 1.2rem 0;
+}
+
+.heroDescription {
+  color: #6C757D;
+  font-weight: 400;
+  font-size: 20.75px;
+  line-height: 29.05px;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+/* Buttons */
+.heroButtonGroup {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.heroPrimaryBtn {
+  background-color: #2E775C;
+  color: white;
+  border: none;
+  padding: 18px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18.67px;
+  line-height: 100%;
+}
+
+.btnSmallText {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.heroSecondaryBtn {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 18px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18.67px;
+  line-height: 100%;
+}
+
+.heroGuaranteeText {
+  color: #2E775C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration: none;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+/* Stats */
+.heroStatsBar {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6C757D;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Image Handling */
+.heroImageWrapperDesktop {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImageWrapperMobile {
+  display: none; /* Desktop par hamesha hidden */
+}
+
+.heroImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- Yahan se Response logic start --- */
+
+@media (max-width: 1100px) {
+  .heroSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+    gap: 0;
+  }
+
+  .heroImageWrapperDesktop {
+    display: none !important; /* iPad Pro par isay hide kar diya */
+  }
+
+  .heroImageWrapperMobile {
+    display: flex !important; /* iPad Pro par isay show kar diya */
+    justify-content: center;
+    margin: 2.5rem 0;
+    width: 100%;
+  }
+
+  .heroImage {
+    max-width: 400px;
+  }
+
+  .heroContentWrapper {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .heroMainTitle {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .heroTagline {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .heroButtonGroup {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .heroPrimaryBtn, .heroSecondaryBtn {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .heroStatsBar {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroMainTitle {
+    font-size: 45px;
+    line-height: 48px;
+  }
+  .heroTagline {
+    font-size: 22px;
+  }
+  .heroImage {
+    max-width: 320px;
+  }
+}

@@ -1,0 +1,121 @@
+.meetingSection {
+  padding: 100px 0;
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start; /* Image aur text top se aligned */
+  justify-content: space-between;
+  padding: 0 10%; 
+  width: 100%;
+  max-width: 1440px; 
+  gap: 80px; /* Text aur image ke darmiyan space */
+}
+
+.videoWrapper {
+  flex: 1;
+  max-width: 550px;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.videoImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Text Alignment & Size --- */
+.contentWrapper {
+  flex: 1.3;
+  max-width: 650px;
+  padding-top: 15px; /* Image ke top se alignment */
+}
+
+.title {
+  font-weight: 700;
+  font-size: 54px; /* Bara font size as requested */
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.list { list-style: none; padding: 0; margin-bottom: 35px; }
+
+.listItem { 
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  font-size: 20px; /* List font bara kiya */
+  font-weight: 500;
+  margin-bottom: 15px; 
+}
+
+.listIcon { width: 28px; height: 28px; }
+
+.bioText p { 
+  font-size: 20px; /* Bio font bara kiya */
+  line-height: 1.6; 
+  color: #444; 
+  margin-bottom: 25px; 
+}
+
+.quote { 
+  font-weight: 500; 
+  font-style: italic; 
+  font-size: 21px;
+  border-left: 5px solid #78E378; 
+  padding-left: 20px; 
+}
+
+/* Play Button */
+.playButton {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; height: 80px;
+  background: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.playIcon {
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid #1a1a1a;
+  margin-left: 5px;
+}
+
+/* --- Responsive (No double title, only layout change) --- */
+
+@media (max-width: 1100px) {
+  .container {
+    padding: 0 5%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contentWrapper {
+    order: 1; /* Mobile par text pehle */
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .videoWrapper {
+    order: 2; /* Mobile par video niche */
+    margin-top: 40px;
+  }
+
+  .title { font-size: 38px; }
+
+  .list, .quote { text-align: left; display: inline-block; }
+}
