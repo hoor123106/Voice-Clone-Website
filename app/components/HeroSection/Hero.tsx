@@ -1,0 +1,72 @@
+import React from 'react';
+import styles from './Hero.module.css';
+
+const Hero: React.FC = () => {
+  return (
+    <section className={styles.heroSection}>
+      <div className={styles.heroContentWrapper}>
+        <p className={styles.heroSubTitle}>
+          A Proven Voice Method Used by Speakers, Educators & Leaders
+        </p>
+
+        <h1 className={styles.heroMainTitle}>
+          VOICE <br /> CONTROL<span>™</span>
+        </h1>
+
+        <h2 className={styles.heroTagline}>
+          How to Speak With Power, Calm & Magnetic Presence
+        </h2>
+
+        <p className={styles.heroDescription}>
+          A weak or tense voice silently costs you authority, trust, and opportunity
+        </p>
+
+        {/* Image wrapper is outside in Desktop, but moved via 'order' in Mobile */}
+        <div className={styles.heroImageWrapperMobile}>
+           <img 
+            src="/images/herogirl.png" 
+            alt="Voice Control Hero" 
+            className={styles.heroImage} 
+          />
+        </div>
+
+        <div className={styles.heroButtonGroup}>
+          <button className={styles.heroPrimaryBtn}>
+            Start My Voice Transformation — <span className={styles.btnSmallText}>Holiday Edition</span>
+          </button>
+          <button className={styles.heroSecondaryBtn}>
+            Watch Trailer
+          </button>
+        </div>
+
+        <p className={styles.heroGuaranteeText}>30-Day Voice Transformation Guarantee</p>
+
+        <div className={styles.heroStatsBar}>
+          <div className={styles.statItem}>
+            <img src="/images/gift.png" alt="gift" className={styles.icon} />
+            <span>Holiday access ends soon</span>
+          </div>
+          <div className={styles.statItem}>
+            <img src="/images/lock.png" alt="lock" className={styles.icon} />
+            <span>Lifetime access</span>
+          </div>
+          <div className={styles.statItem}>
+            <img src="/images/star.png" alt="star" className={styles.icon} />
+            <span>9,000+ students transformed</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Image Wrapper */}
+      <div className={styles.heroImageWrapperDesktop}>
+        <img 
+          src="/images/herogirl.png" 
+          alt="Voice Control Hero" 
+          className={styles.heroImage} 
+        />
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
