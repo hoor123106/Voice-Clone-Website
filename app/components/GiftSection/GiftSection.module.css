@@ -5,6 +5,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -12,14 +13,26 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 60px;
+  /* Changed to space-between to push text left and image right */
+  justify-content: space-between;
+  gap: 40px;
   width: 100%;
 }
 
-.imageWrapper {
-  flex: 1.2;
+.content {
+  flex: 1;
+  max-width: 600px;
   display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  /* Removed negative margin to keep it stable */
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  /* Pushes the image to the far right */
   justify-content: flex-end;
 }
 
@@ -31,19 +44,14 @@
   display: block;
 }
 
-.content {
-  flex: 1;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-}
-
+/* Typography & Button (Keeping your styles) */
 .heading {
   font-size: 48px;
   font-weight: 400;
   color: #0A0A0A;
   line-height: 1.1;
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .lineOne {
@@ -51,10 +59,12 @@
   align-items: center;
   gap: 12px;
   white-space: nowrap;
+  justify-content: flex-start;
 }
 
 .lineTwo {
   display: block;
+  text-align: left;
 }
 
 .treeIcon {
@@ -68,6 +78,7 @@
   color: #4B5563;
   line-height: 1.6;
   margin-bottom: 32px;
+  text-align: left;
 }
 
 .giftButton {
@@ -82,108 +93,31 @@
   transition: all 0.2s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   width: fit-content;
+  align-self: flex-start;
 }
 
+/* Mobile Responsive */
 @media (max-width: 1055px) {
-  .giftSection {
-    padding: 60px 24px;
-    min-height: auto;
-  }
-
-  @media (min-width: 640px) {
-    .availableSection {
-      padding: 64px 32px;
-    }
-
-    .mainHeading {
-      font-size: 42px;
-    }
-
-    .retailersGrid {
-      grid-template-columns: repeat(3, 1fr);
-      max-width: 600px;
-      gap: 16px;
-    }
-
-    .retailerName {
-      font-size: 13px;
-    }
-  }
-
   .container {
     flex-direction: column;
     text-align: center;
-    gap: 0;
   }
 
-  .imageWrapper,
-  .content {
-    display: contents;
-  }
-
-  .heading {
-    order: 1;
-    font-size: 48px;
-    margin-bottom: 16px;
-  }
-
-  .lineOne {
+  .heading,
+  .description,
+  .lineOne,
+  .lineTwo {
+    text-align: center;
     justify-content: center;
   }
 
-  .description {
-    order: 2;
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .personImage {
-    order: 3;
-    margin: 0 auto 90px auto;
-  }
-
   .giftButton {
-    order: 4;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
+    align-self: center;
   }
 
-  .treeIcon {
-    width: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .heading {
-    font-size: 38px;
-  }
-
-  .description {
-    font-size: 16px;
-  }
-
-  .personImage {
-    max-height: 35vh;
-  }
-
-  .treeIcon {
-    width: 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .heading {
-    font-size: 32px;
-  }
-
-  .lineOne {
-    gap: 8px;
-  }
-
-  .giftButton {
-    width: 100%;
-    padding: 14px 20px;
+  .imageWrapper {
+    justify-content: center;
+    margin-top: 40px;
   }
 }

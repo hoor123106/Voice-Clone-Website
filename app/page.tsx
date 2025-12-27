@@ -13,19 +13,18 @@ import FAQ from "./components/FAQSection/FAQ";
 
 export default function Home() {
   return <div>
+    <Hero />
+    <Meeting></Meeting>
     <AvailableSection />
     <GainSection />
+    <Course></Course>
+    <Card></Card>
     <GiftSection />
     <TestimonialCarousel />
     <PricingSection />
-     <main>
-      <Hero />
-      <Meeting></Meeting>
-      <Course></Course>
-      <Card></Card>
-      <FAQ></FAQ>
-    </main>
+
+    <FAQ></FAQ>
     <Footer />
   </div>
-  
+
 }
