@@ -7,21 +7,19 @@ const Meeting: React.FC = () => {
   return (
     <section className={styles.meetingSection}>
       <div className={styles.container}>
-
         <div className={styles.videoWrapper}>
           <div className={styles.videoContainer}>
             <iframe
               src="https://drive.google.com/file/d/1JoCcdK7rgk0KMoryx6Oa2yXFaLcvras8/preview"
-              width="640"
-              height="480"
+              className={styles.videoElement}
               allow="autoplay"
+              allowFullScreen
             ></iframe>
           </div>
         </div>
 
         <div className={styles.contentWrapper}>
           <h2 className={styles.title}>Meet the Voice Behind the Method</h2>
-
           <ul className={styles.list}>
             <li className={styles.listItem}>
               <img src="/images/degree.png" alt="Education" className={styles.listIcon} />
@@ -53,7 +51,6 @@ const Meeting: React.FC = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
