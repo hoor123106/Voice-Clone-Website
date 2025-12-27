@@ -16,7 +16,6 @@ const Meeting: React.FC = () => {
               height="480"
               allow="autoplay"
             ></iframe>
-
           </div>
         </div>
 
