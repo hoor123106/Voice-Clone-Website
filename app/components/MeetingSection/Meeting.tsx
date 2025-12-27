@@ -10,6 +10,12 @@ const Meeting: React.FC = () => {
 
         <div className={styles.videoWrapper}>
           <div className={styles.videoContainer}>
+            <iframe
+              src="https://drive.google.com/file/d/1JoCcdK7rgk0KMoryx6Oa2yXFaLcvras8/preview"
+              width="640"
+              height="480"
+              allow="autoplay"
+            ></iframe>
 
           </div>
         </div>
