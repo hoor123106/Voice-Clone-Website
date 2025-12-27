@@ -5,7 +5,7 @@
 /.pnp
 /.next
 .pnp.*
-public/video.mp4
+/public/video.mp4
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
