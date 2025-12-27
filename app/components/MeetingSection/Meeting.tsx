@@ -10,16 +10,14 @@ const Meeting: React.FC = () => {
 
         <div className={styles.videoWrapper}>
           <div className={styles.videoContainer}>
-            <video
-              className={styles.videoElement}
-              controls
-              poster="/images/video.png"
-              preload="metadata"
-            >
-              {/* Path check karein: Agar file public/video.mp4 hai to src="/video.mp4" sahi hai */}
-              <source src="/video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe
+              src="https://drive.google.com/file/d/1JoCcdK7rgk0KMoryx6Oa2yXFaLcvras8/preview"
+              width="640"
+              height="480"
+              allow="autoplay"
+            ></iframe>
+
+
           </div>
         </div>
 

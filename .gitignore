@@ -3,7 +3,9 @@
 # dependencies
 /node_modules
 /.pnp
+/.next
 .pnp.*
+public/video.mp4
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
