@@ -27,9 +27,51 @@
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   background: #000;
-  /* 16:9 standard ratio taki video fit dikhe */
   aspect-ratio: 16 / 9;
   width: 100%;
+}
+
+.thumbnailWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playButton {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(120, 227, 120, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.playIcon {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid white;
+  margin-left: 5px;
+}
+
+.thumbnailWrapper:hover .playButton {
+  transform: scale(1.1);
+  background: #5cc95c;
 }
 
 .videoElement {
@@ -39,7 +81,6 @@
   width: 100%;
   height: 100%;
   border: none;
-  /* Google Drive padding ko khatam karne ke liye thoda scale */
   transform: scale(1.02);
 }
 

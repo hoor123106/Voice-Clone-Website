@@ -1,20 +1,36 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Meeting.module.css';
 
 const Meeting: React.FC = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
     <section className={styles.meetingSection}>
       <div className={styles.container}>
         <div className={styles.videoWrapper}>
           <div className={styles.videoContainer}>
-            <iframe
-              src="https://drive.google.com/file/d/1JoCcdK7rgk0KMoryx6Oa2yXFaLcvras8/preview"
-              className={styles.videoElement}
-              allow="autoplay"
-              allowFullScreen
-            ></iframe>
+            {!showVideo ? (
+              <div className={styles.thumbnailWrapper} onClick={() => setShowVideo(true)}>
+                <img
+                  src="/images/video.png"
+                  alt="Thumbnail"
+                  className={styles.thumbnailImage}
+                />
+                <div className={styles.playButton}>
+                  <div className={styles.playIcon}></div>
+                </div>
+              </div>
+            ) : (
+              <iframe
+                src="https://drive.google.com/file/d/1JoCcdK7rgk0KMoryx6Oa2yXFaLcvras8/preview?autoplay=1"
+                className={styles.videoElement}
+                allow="autoplay"
+                loading="eager"
+                title="Meeting Video"
+              ></iframe>
+            )}
           </div>
         </div>
 
