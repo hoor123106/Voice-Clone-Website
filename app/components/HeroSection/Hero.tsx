@@ -21,12 +21,11 @@ const Hero: React.FC = () => {
           A weak or tense voice silently costs you authority, trust, and opportunity
         </p>
 
-        {/* Image wrapper is outside in Desktop, but moved via 'order' in Mobile */}
         <div className={styles.heroImageWrapperMobile}>
-           <img 
-            src="/images/herogirl.png" 
-            alt="Voice Control Hero" 
-            className={styles.heroImage} 
+          <img
+            src="/images/herogirl.png"
+            alt="Voice Control Hero"
+            className={styles.heroImage}
           />
         </div>
 
@@ -57,12 +56,11 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Desktop Image Wrapper */}
       <div className={styles.heroImageWrapperDesktop}>
-        <img 
-          src="/images/herogirl.png" 
-          alt="Voice Control Hero" 
-          className={styles.heroImage} 
+        <img
+          src="/images/herogirl.png"
+          alt="Voice Control Hero"
+          className={styles.heroImage}
         />
       </div>
     </section>
