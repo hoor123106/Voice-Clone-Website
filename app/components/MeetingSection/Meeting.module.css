@@ -26,15 +26,15 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  background: #000;
-  aspect-ratio: 16 / 9;
+  background: transparent;
   width: 100%;
+  display: flex;
 }
 
 .thumbnailWrapper {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -43,21 +43,25 @@
 
 .thumbnailImage {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 .playButton {
   position: absolute;
   width: 80px;
   height: 80px;
-  background: rgba(120, 227, 120, 0.9);
+  background-color: #D0C6C5;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .playIcon {
@@ -65,23 +69,20 @@
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 25px solid white;
-  margin-left: 5px;
+  border-left: 25px solid #000000;
+  margin-left: 6px;
 }
 
 .thumbnailWrapper:hover .playButton {
-  transform: scale(1.1);
-  background: #5cc95c;
+  transform: translate(-50%, -50%) scale(1.05);
+  background-color: #c4b9b8;
 }
 
 .videoElement {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
   border: none;
-  transform: scale(1.02);
+  border-radius: 20px;
 }
 
 .contentWrapper {
@@ -118,9 +119,10 @@
 }
 
 .bioText p {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
   line-height: 1.6;
-  color: #444;
+  color: black;
   margin-bottom: 20px;
 }
 
@@ -129,7 +131,7 @@
   font-weight: 500;
   font-style: italic;
   font-size: 19px;
-  border-left: 4px solid #78E378;
+  border-left: 4px solid #2e775c;
   padding-left: 15px;
 }
 
@@ -142,6 +144,7 @@
 
   .videoWrapper {
     max-width: 100%;
+    margin-bottom: 40px;
   }
 
   .contentWrapper {

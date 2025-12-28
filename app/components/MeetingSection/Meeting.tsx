@@ -14,7 +14,7 @@ const Meeting: React.FC = () => {
             {!showVideo ? (
               <div className={styles.thumbnailWrapper} onClick={() => setShowVideo(true)}>
                 <img
-                  src="/images/video.png"
+                  src="/images/video1.png"
                   alt="Thumbnail"
                   className={styles.thumbnailImage}
                 />
@@ -24,10 +24,10 @@ const Meeting: React.FC = () => {
               </div>
             ) : (
               <iframe
-                src="https://drive.google.com/file/d/1JoCcdK7rgk0KMoryx6Oa2yXFaLcvras8/preview?autoplay=1"
+                src="https://drive.google.com/file/d/1JoCcdK7rgk0KMoryx6Oa2yXFaLcvras8/preview"
                 className={styles.videoElement}
-                allow="autoplay"
-                loading="eager"
+                allow="autoplay; fullscreen; shadow-root"
+                allowFullScreen
                 title="Meeting Video"
               ></iframe>
             )}

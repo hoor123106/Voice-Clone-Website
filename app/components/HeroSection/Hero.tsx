@@ -21,14 +21,6 @@ const Hero: React.FC = () => {
           A weak or tense voice silently costs you authority, trust, and opportunity
         </p>
 
-        <div className={styles.heroImageWrapperMobile}>
-          <img
-            src="/images/herogirl.png"
-            alt="Voice Control Hero"
-            className={styles.heroImage}
-          />
-        </div>
-
         <div className={styles.heroButtonGroup}>
           <button className={styles.heroPrimaryBtn}>
             Start My Voice Transformation — <span className={styles.btnSmallText}>Holiday Edition</span>
@@ -53,6 +45,14 @@ const Hero: React.FC = () => {
             <img src="/images/star.png" alt="star" className={styles.icon} />
             <span>9,000+ students transformed</span>
           </div>
+        </div>
+
+        <div className={styles.heroImageWrapperMobile}>
+          <img
+            src="/images/herogirl.png"
+            alt="Voice Control Hero"
+            className={styles.heroImage}
+          />
         </div>
       </div>
 
