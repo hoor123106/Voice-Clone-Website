@@ -12,22 +12,25 @@ const Meeting: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.videoWrapper}>
           <div className={styles.videoContainer}>
-            {/* Direct Link to Google Drive */}
+            {/* Play button ko hata diya gaya hai, ab puri image clickable hai */}
             <a
               href={driveLink}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.thumbnailWrapper}
+              style={{ display: 'block', width: '100%', height: '100%' }}
             >
               <img
                 src="/images/video.png"
                 alt="Watch Meeting Video"
                 className={styles.thumbnailImage}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  cursor: 'pointer' // Mouse le jane par hath ka nishan banega
+                }}
               />
-              <div className={styles.playButton}>
-                <div className={styles.playIcon}></div>
-              </div>
             </a>
           </div>
         </div>
