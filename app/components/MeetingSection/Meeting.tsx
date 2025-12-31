@@ -4,7 +4,6 @@ import React from 'react';
 import styles from './Meeting.module.css';
 
 const Meeting: React.FC = () => {
-  // Drive link constant
   const driveLink = "https://drive.google.com/file/d/1kEG8qrTpTThTGxQnxBFJ0Z12BY8gha-C/view?usp=sharing";
 
   return (
@@ -12,7 +11,6 @@ const Meeting: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.videoWrapper}>
           <div className={styles.videoContainer}>
-            {/* Play button ko hata diya gaya hai, ab puri image clickable hai */}
             <a
               href={driveLink}
               target="_blank"
@@ -28,7 +26,7 @@ const Meeting: React.FC = () => {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  cursor: 'pointer' // Mouse le jane par hath ka nishan banega
+                  cursor: 'pointer'
                 }}
               />
             </a>
@@ -58,8 +56,7 @@ const Meeting: React.FC = () => {
 
           <div className={styles.bioText}>
             <p>
-              Sevil Velsha is a voice coach, PhD, and educator dedicated to helping people
-              unlock authority, calm, and presence through their voice.
+              Sevil Velsha is a voice coach, PhD, and educator dedicated to helping people unlock authority, calm, and presence through their voice. With a background in linguistics, intonation research, and stage performance, she bridges science and art to teach voice control that feels natural, grounded, and powerful.
             </p>
             <div className={styles.quoteWrapper}>
               <span className={styles.quote}>
