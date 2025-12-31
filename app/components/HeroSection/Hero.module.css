@@ -2,34 +2,28 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 8rem 5% 4rem 10%;
-  background-color: #f1f7f5;
-  min-height: 90vh;
+  padding: 6rem 8% 4rem 10%;
+  background-color: #ffffff;
+  min-height: 85vh;
   gap: 2rem;
-  overflow: hidden;
 }
 
 .heroContentWrapper {
-  width: 65%;
-  flex: none;
-  max-width: 850px;
+  width: 55%;
   display: flex;
   flex-direction: column;
 }
 
 .heroSubTitle {
   color: #6C757D;
-  font-weight: 400;
-  font-size: 20.75px;
-  line-height: 1.2;
-  letter-spacing: 0.36px;
-  margin-bottom: 1.5rem;
+  font-size: 18px;
+  margin-bottom: 1rem;
 }
 
 .heroMainTitle {
-  font-weight: 700;
-  font-size: 132.78px;
-  line-height: 120px;
+  font-weight: 800;
+  font-size: 110px;
+  line-height: 95px;
   letter-spacing: -4px;
   color: #1a1a1a;
   margin: 0;
@@ -37,193 +31,147 @@
 }
 
 .heroMainTitle span {
-  font-size: 45px;
+  font-size: 35px;
   vertical-align: top;
+  margin-left: 5px;
 }
 
 .heroTagline {
-  font-weight: 500;
-  font-size: 37.34px;
-  line-height: 41.49px;
-  color: #222;
-  margin: 2.5rem 0 1.2rem 0;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 1.5rem 0 1rem 0;
 }
 
 .heroDescription {
   color: #6C757D;
-  font-weight: 400;
-  font-size: 20.75px;
-  line-height: 29.05px;
-  margin-bottom: 1rem;
-  /* Reduced to sit closer to bio */
-  max-width: 600px;
-}
-
-.heroAuthorBio {
-  color: #1a1a1a;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.4;
-  margin-bottom: 3rem;
-}
-
-.heroAuthorBio span {
-  display: block;
-  font-weight: 500;
   font-size: 18px;
-  color: #6C757D;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 550px;
 }
 
 .heroButtonGroup {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   margin-bottom: 1.2rem;
 }
 
 .heroPrimaryBtn {
-  background-color: #2E775C;
+  background-color: #437a63;
   color: white;
   border: none;
-  padding: 18px 28px;
-  border-radius: 8px;
+  padding: 16px 24px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 18.67px;
-  line-height: 100%;
-}
-
-.btnSmallText {
-  font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .heroSecondaryBtn {
   background: white;
-  border: 1px solid #ccc;
-  padding: 18px 28px;
-  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 16px 32px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 18.67px;
-  line-height: 100%;
+  font-size: 16px;
+  color: #1a1a1a;
 }
 
 .heroGuaranteeText {
-  color: #2E775C;
+  color: #1a1a1a;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 100%;
-  text-decoration: none;
-  margin-bottom: 3rem;
-  display: block;
+  font-size: 14px;
+  margin-bottom: 2.5rem;
 }
 
 .heroStatsBar {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .statItem {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: #6C757D;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
 }
 
-.heroImageWrapperDesktop {
-  width: 35%;
-  flex: none;
+.heroRightContainer {
+  width: 40%;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 10rem;
+  justify-content: center;
+  padding-top: 8rem;
+  /* Image ko neeche karne ke liye padding barha di */
 }
 
-.heroImageWrapperMobile {
-  display: none;
+.heroImageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .heroImage {
-  max-width: 100%;
+  max-width: 420px;
   height: auto;
-  object-fit: contain;
+  display: block;
 }
 
-@media (max-width: 1100px) {
+.authorBio {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.authorName {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.authorTitle {
+  font-size: 14px;
+  color: #4b5563;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .heroRightContainer {
+    padding-top: 2rem;
+  }
+
   .heroSection {
     flex-direction: column;
     text-align: center;
-    padding: 3rem 5%;
-    gap: 0;
-    align-items: center;
+    padding: 4rem 5%;
   }
 
-  .heroContentWrapper {
+  .heroContentWrapper,
+  .heroRightContainer {
     width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-
-  .heroImageWrapperDesktop {
-    display: none !important;
-  }
-
-  .heroImageWrapperMobile {
-    display: flex !important;
-    justify-content: center;
-    margin-top: 3rem;
-    width: 100%;
-    order: 10;
-  }
-
-  .heroImage {
-    max-width: 400px;
   }
 
   .heroMainTitle {
-    font-size: 72px;
-    line-height: 72px;
+    font-size: 70px;
+    line-height: 70px;
   }
 
   .heroButtonGroup {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-
-  .heroPrimaryBtn,
-  .heroSecondaryBtn {
-    width: 100%;
-    max-width: 400px;
+    justify-content: center;
   }
 
   .heroStatsBar {
     justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .heroMainTitle {
-    font-size: 45px;
-    line-height: 48px;
-  }
-
-  .heroTagline {
-    font-size: 22px;
-  }
-
-  .heroImage {
-    max-width: 320px;
-  }
-
-  .heroAuthorBio {
-    font-size: 18px;
   }
 }

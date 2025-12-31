@@ -1,7 +1,18 @@
+"use client";
+
 import React from 'react';
 import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('Pricing-section');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const trailerLink = "https://drive.google.com/file/d/1kEG8qrTpTThTGxQnxBFJ0Z12BY8gha-C/view?usp=sharing";
+
   return (
     <section className={styles.heroSection}>
       <div className={styles.heroContentWrapper}>
@@ -22,10 +33,10 @@ const Hero: React.FC = () => {
         </p>
 
         <div className={styles.heroButtonGroup}>
-          <button className={styles.heroPrimaryBtn}>
+          <button className={styles.heroPrimaryBtn} onClick={scrollToPricing}>
             Start My Voice Transformation — <span className={styles.btnSmallText}>Holiday Edition</span>
           </button>
-          <button className={styles.heroSecondaryBtn}>
+          <button className={styles.heroSecondaryBtn} onClick={() => window.open(trailerLink, '_blank')}>
             Watch Trailer
           </button>
         </div>
@@ -46,22 +57,20 @@ const Hero: React.FC = () => {
             <span>9,000+ students transformed</span>
           </div>
         </div>
-
-        <div className={styles.heroImageWrapperMobile}>
-          <img
-            src="/images/herogirl.png"
-            alt="Voice Control Hero"
-            className={styles.heroImage}
-          />
-        </div>
       </div>
 
-      <div className={styles.heroImageWrapperDesktop}>
-        <img
-          src="/images/herogirl.png"
-          alt="Voice Control Hero"
-          className={styles.heroImage}
-        />
+      <div className={styles.heroRightContainer}>
+        <div className={styles.heroImageWrapper}>
+          <img
+            src="/images/herogirl.png"
+            alt="Sevil Velsha"
+            className={styles.heroImage}
+          />
+          <div className={styles.authorBio}>
+            <h3 className={styles.authorName}>Sevil Velsha, PhD</h3>
+            <p className={styles.authorTitle}>Voice Researcher & Speech Authamy</p>
+          </div>
+        </div>
       </div>
     </section>
   );

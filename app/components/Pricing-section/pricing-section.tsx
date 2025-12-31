@@ -2,7 +2,7 @@ import styles from "./pricing-section.module.css"
 
 export default function PricingSection() {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="Pricing-section">
       <h1 className={styles.heading}>Pricing & Tiers</h1>
 
       <div className={styles.tiersContainer}>
