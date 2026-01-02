@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
           />
           <div className={styles.authorBio}>
             <h3 className={styles.authorName}>Sevil Velsha, PhD</h3>
-            <p className={styles.authorTitle}>Voice Researcher & Speech Authamy</p>
+            <p className={styles.authorTitle}>Voice Researcher & Speech Coach</p>
           </div>
         </div>
       </div>

@@ -8,34 +8,36 @@ import Image from "next/image"
 const testimonials = [
   {
     id: 1,
-    quote: "Voice Control is a groundbreaking guide to mastering vocal power, emotional regulation, and authentic presence essential reading for anyone who speaks to be heard.",
-    author: "SEVIL VELSHA",
-    role: "Speaker - Coach, Author of Voice Control",
+    quote: "Clear, grounded, and practical. It explains voice authority without exaggeration.",
+    author: "Daniel Morgan",
+    role: "Leadership Coach",
+    image: "/images/Testimonial-Crousel-Image.webp",
+    position: "center" // Normal position
   },
   {
     id: 2,
-    quote: "An incredible resource that transformed how I communicate. The techniques are practical, effective, and life-changing for any professional.",
-    author: "JAMES MORGAN",
-    role: "CEO, Leadership Expert",
+    quote: "Finally, a serious explanation of how voice affects trust.",
+    author: "Elena Petrova",
+    role: "Speech Coach",
+    image: "/images/Testimonial-Crousel-Image-2.jpg",
+    position: "top" // Isse face frame mein sahi dikhega
   },
   {
     id: 3,
-    quote: "This approach to vocal mastery has revolutionized my coaching practice. My clients see immediate results in their confidence and presence.",
-    author: "SARAH CHEN",
-    role: "Executive Coach, Public Speaker",
+    quote: "Useful for anyone who teaches, leads, or speaks for a living.",
+    author: "Mark Thompson",
+    role: "Educator",
+    image: "/images/Testimonial-Crousel-Image-3.jpg",
+    position: "center"
   },
   {
     id: 4,
-    quote: "A must-read for anyone in leadership. The insights on emotional regulation through voice are game-changing and backed by real science.",
-    author: "DAVID RODRIGUEZ",
-    role: "Organizational Psychologist",
-  },
-  {
-    id: 5,
-    quote: "The most comprehensive guide I've found on vocal presence. It's transformed not just my speaking, but my entire professional identity.",
-    author: "EMILY WATSON",
-    role: "TEDx Speaker, Author",
-  },
+    quote: "This connects voice technique with real psychological impact.",
+    author: "Sofia Reynolds",
+    role: "Corporate Trainer",
+    image: "/images/Testimonial-Crousel-Image-4.jpg",
+    position: "center"
+  }
 ]
 
 export default function TestimonialCarousel() {
@@ -57,13 +59,28 @@ export default function TestimonialCarousel() {
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
-        <Image
-          src="/images/TestimonailsBigImage.png"
-          alt="Testimonials Background"
-          fill
-          className={styles.backgroundImage}
-          priority
-        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`bg-${currentIndex}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }} // Matches your original opacity
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className={styles.absoluteFull}
+          >
+            <Image
+              src={testimonials[currentIndex].image}
+              alt="Testimonials Background"
+              fill
+              style={{
+                objectFit: 'cover',
+                objectPosition: testimonials[currentIndex].position // Face adjust karne ke liye
+              }}
+              className={styles.backgroundImage}
+              priority
+            />
+          </motion.div>
+        </AnimatePresence>
         <div className={styles.overlay} />
       </div>
 
