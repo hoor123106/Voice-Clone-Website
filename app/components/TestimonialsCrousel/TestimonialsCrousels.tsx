@@ -12,7 +12,7 @@ const testimonials = [
     author: "Daniel Morgan",
     role: "Leadership Coach",
     image: "/images/Testimonial-Crousel-Image.webp",
-    position: "center" // Normal position
+    position: "center"
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const testimonials = [
     author: "Elena Petrova",
     role: "Speech Coach",
     image: "/images/Testimonial-Crousel-Image-2.jpg",
-    position: "top" // Isse face frame mein sahi dikhega
+    position: "top"
   },
   {
     id: 3,
@@ -51,9 +51,9 @@ export default function TestimonialCarousel() {
   }, [])
 
   const variants = {
-    enter: { x: 100, opacity: 0 },
+    enter: { x: 50, opacity: 0 },
     center: { x: 0, opacity: 1 },
-    exit: { x: -100, opacity: 0 },
+    exit: { x: -50, opacity: 0 },
   }
 
   return (
@@ -63,10 +63,10 @@ export default function TestimonialCarousel() {
           <motion.div
             key={`bg-${currentIndex}`}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }} // Matches your original opacity
+            animate={{ opacity: 0.85 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            className={styles.absoluteFull}
+            transition={{ duration: 1 }}
+            style={{ position: 'absolute', inset: 0 }}
           >
             <Image
               src={testimonials[currentIndex].image}
@@ -74,7 +74,7 @@ export default function TestimonialCarousel() {
               fill
               style={{
                 objectFit: 'cover',
-                objectPosition: testimonials[currentIndex].position // Face adjust karne ke liye
+                objectPosition: testimonials[currentIndex].position
               }}
               className={styles.backgroundImage}
               priority
@@ -92,7 +92,7 @@ export default function TestimonialCarousel() {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
             className={styles.testimonialContent}
           >
             <p className={styles.quote}>"{testimonials[currentIndex].quote}"</p>
