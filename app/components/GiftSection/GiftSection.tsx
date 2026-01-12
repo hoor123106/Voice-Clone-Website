@@ -11,7 +11,7 @@ export default function GiftSection() {
         <div className={styles.content}>
           <h2 className={styles.heading}>
             <span className={styles.lineOne}>
-              <img src="/images/tree.png" alt="Tree" className={styles.treeIcon} />
+              <img src="/images/giftBox.webp" alt="Tree" className={styles.treeIcon} />
               A Gift that Arrives in
             </span>
             <span className={styles.lineTwo}>Seconds</span>
