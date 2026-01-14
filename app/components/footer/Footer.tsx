@@ -20,7 +20,7 @@ export default function Footer() {
         <h2 className={styles.ctaHeading}>Your Voice Can Change Your Life.</h2>
         <p className={styles.ctaSubheading}>Start today — and never sound the same again.</p>
         <button className={styles.ctaButton}>
-          <img src="/images/tree.png" alt="" className={styles.footerTree} />
+          <img src="/images/giftBox.webp" alt="" className={styles.footerTree} />
           Get Instant Access - 40% off
         </button>
         <p className={styles.deliveryText}>📩 Deliver immediately. No Shipping</p>
