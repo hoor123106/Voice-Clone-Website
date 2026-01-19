@@ -7,47 +7,31 @@ export default function PricingSection() {
 
       <div className={styles.tiersContainer}>
         <div className={styles.card}>
-          <div className={styles.price}>$97</div>
+          <div className={styles.price}>$99</div>
           <p className={styles.description}>Perfect for independent learners.</p>
 
           <ul className={styles.featureList}>
             <li className={styles.feature}>
               <svg className={styles.checkIcon} viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               All modules
             </li>
             <li className={styles.feature}>
               <svg className={styles.checkIcon} viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               Workbook
             </li>
             <li className={styles.feature}>
               <svg className={styles.checkIcon} viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               Certificate
             </li>
             <li className={styles.feature}>
               <svg className={styles.checkIcon} viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               Lifetime access
             </li>
@@ -58,19 +42,14 @@ export default function PricingSection() {
 
         <div className={`${styles.card} ${styles.proCard}`}>
           <div className={styles.badge}>Most Popular</div>
-
           <div className={styles.tierLabel}>PRO TIER</div>
-          <div className={styles.price}>$297</div>
+          <div className={styles.price}>$299</div>
           <p className={styles.description}>For learners who want personalized guidance.</p>
 
           <ul className={styles.featureList}>
             <li className={styles.feature}>
               <svg className={styles.checkIcon} viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               Everything in Self-Paced
             </li>
@@ -84,21 +63,23 @@ export default function PricingSection() {
             </li>
           </ul>
 
-          <button className={`${styles.button} ${styles.proButton}`}>Choose Pro Tier</button>
+          <a
+            href="https://buy.stripe.com/7sY3cw5J27tgdvE92R14404"
+            className={`${styles.button} ${styles.proButton}`}
+            style={{ textDecoration: 'none', display: 'block', textAlign: 'center' }}
+          >
+            Choose Pro Tier
+          </a>
         </div>
 
         <div className={styles.card}>
-          <div className={styles.price}>$597</div>
+          <div className={styles.price}>$599</div>
           <p className={styles.description}>The highest transformation + direct access.</p>
 
           <ul className={styles.featureList}>
             <li className={styles.feature}>
               <svg className={styles.checkIcon} viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               Everything in PRO
             </li>
@@ -115,7 +96,13 @@ export default function PricingSection() {
             </li>
           </ul>
 
-          <button className={styles.button}>Choose Premium</button>
+          <a
+            href="https://buy.stripe.com/fZu4gA7RaaFs2R0baZ14406"
+            className={styles.button}
+            style={{ textDecoration: 'none', display: 'block', textAlign: 'center' }}
+          >
+            Choose Premium
+          </a>
         </div>
       </div>
 

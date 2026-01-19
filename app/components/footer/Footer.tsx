@@ -19,10 +19,16 @@ export default function Footer() {
       <div className={styles.ctaSection}>
         <h2 className={styles.ctaHeading}>Your Voice Can Change Your Life.</h2>
         <p className={styles.ctaSubheading}>Start today — and never sound the same again.</p>
-        <button className={styles.ctaButton}>
+
+        <a
+          href="https://buy.stripe.com/7sY3cw5J27tgdvE92R14404"
+          className={styles.ctaButton}
+          style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+        >
           <img src="/images/giftBox.webp" alt="" className={styles.footerTree} />
           Get Instant Access - 40% off
-        </button>
+        </a>
+
         <p className={styles.deliveryText}>📩 Deliver immediately. No Shipping</p>
       </div>
 

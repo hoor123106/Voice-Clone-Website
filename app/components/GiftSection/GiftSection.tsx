@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import styles from "./GiftSection.module.css"
 
 export default function GiftSection() {
@@ -23,7 +24,9 @@ export default function GiftSection() {
           </p>
 
           <button type="button" className={styles.giftButton}>
-            Send as a Gift
+            <Link href="https://buy.stripe.com/7sY3cw5J27tgdvE92R14404" className={styles.giftLink}>
+              Send as a Gift
+            </Link>
           </button>
         </div>
 
