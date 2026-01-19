@@ -6,6 +6,7 @@ export default function PricingSection() {
       <h1 className={styles.heading}>Pricing & Tiers</h1>
 
       <div className={styles.tiersContainer}>
+        {/* Updated First Card */}
         <div className={styles.card}>
           <div className={styles.price}>$99</div>
           <p className={styles.description}>Perfect for independent learners.</p>
@@ -37,9 +38,16 @@ export default function PricingSection() {
             </li>
           </ul>
 
-          <button className={styles.button}>Choose Plan</button>
+          <a
+            href="https://buy.stripe.com/14AdRagnGdREbnw1Ap14407"
+            className={styles.button}
+            style={{ textDecoration: 'none', display: 'block', textAlign: 'center' }}
+          >
+            Choose Plan
+          </a>
         </div>
 
+        {/* Pro Card */}
         <div className={`${styles.card} ${styles.proCard}`}>
           <div className={styles.badge}>Most Popular</div>
           <div className={styles.tierLabel}>PRO TIER</div>
@@ -72,6 +80,7 @@ export default function PricingSection() {
           </a>
         </div>
 
+        {/* Premium Card */}
         <div className={styles.card}>
           <div className={styles.price}>$599</div>
           <p className={styles.description}>The highest transformation + direct access.</p>
