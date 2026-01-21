@@ -21,7 +21,7 @@ export default function Footer() {
         <p className={styles.ctaSubheading}>Start today — and never sound the same again.</p>
 
         <a
-          href="https://buy.stripe.com/7sY3cw5J27tgdvE92R14404"
+          href="https://buy.stripe.com/14AdRagnGdREbnw1Ap14407"
           className={styles.ctaButton}
           style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
         >
