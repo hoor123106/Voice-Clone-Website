@@ -24,7 +24,7 @@ export default function GiftSection() {
           </p>
 
           <button type="button" className={styles.giftButton}>
-            <Link href="https://buy.stripe.com/7sY3cw5J27tgdvE92R14404" className={styles.giftLink}>
+            <Link href="https://buy.stripe.com/14AdRagnGdREbnw1Ap14407" className={styles.giftLink}>
               Send as a Gift
             </Link>
           </button>
